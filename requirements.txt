@@ -1,0 +1,6 @@
+torch==1.11.0
+numpy
+scipy
+opencv-python
+scikit-image
+typing_extensions

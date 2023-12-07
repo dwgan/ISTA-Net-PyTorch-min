@@ -1,0 +1,1 @@
+[01/200] Total Loss: 0.0022, Discrepancy Loss: 0.0021,  Constraint Loss: 0.0080

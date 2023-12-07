@@ -1,0 +1,15 @@
+[01/300] Total Loss: 0.0145, Discrepancy Loss: 0.0107,  Constraint Loss: 0.0381
+[02/300] Total Loss: 0.0075, Discrepancy Loss: 0.0047,  Constraint Loss: 0.0275
+[03/300] Total Loss: 0.0065, Discrepancy Loss: 0.0047,  Constraint Loss: 0.0173
+[04/300] Total Loss: 0.0150, Discrepancy Loss: 0.0075,  Constraint Loss: 0.0747
+[05/300] Total Loss: 0.0078, Discrepancy Loss: 0.0055,  Constraint Loss: 0.0239
+[06/300] Total Loss: 0.0076, Discrepancy Loss: 0.0066,  Constraint Loss: 0.0103
+[07/300] Total Loss: 0.0066, Discrepancy Loss: 0.0058,  Constraint Loss: 0.0076
+[08/300] Total Loss: 0.0059, Discrepancy Loss: 0.0052,  Constraint Loss: 0.0069
+[09/300] Total Loss: 0.0040, Discrepancy Loss: 0.0037,  Constraint Loss: 0.0030
+[10/300] Total Loss: 0.0591, Discrepancy Loss: 0.0300,  Constraint Loss: 0.2915
+[11/300] Total Loss: 0.0130, Discrepancy Loss: 0.0068,  Constraint Loss: 0.0621
+[12/300] Total Loss: 0.0155, Discrepancy Loss: 0.0082,  Constraint Loss: 0.0731
+[13/300] Total Loss: 0.0103, Discrepancy Loss: 0.0076,  Constraint Loss: 0.0274
+[14/300] Total Loss: 0.0076, Discrepancy Loss: 0.0043,  Constraint Loss: 0.0326
+[15/300] Total Loss: 0.0061, Discrepancy Loss: 0.0052,  Constraint Loss: 0.0092

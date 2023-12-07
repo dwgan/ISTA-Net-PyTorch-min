@@ -1,0 +1,4 @@
+CS ratio is 25, Avg PSNR/SSIM for Set11 is 21.04/0.5497, Epoch number of model is 5 
+CS ratio is 25, Avg PSNR/SSIM for Set11 is 18.88/0.3799, Epoch number of model is 10 
+CS ratio is 25, Avg PSNR/SSIM for Set11 is 22.20/0.5900, Epoch number of model is 15 
+CS ratio is 25, Avg PSNR/SSIM for Set11 is 22.07/0.5852, Epoch number of model is 15 

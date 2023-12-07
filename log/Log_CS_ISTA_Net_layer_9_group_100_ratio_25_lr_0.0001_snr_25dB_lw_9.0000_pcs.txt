@@ -1,0 +1,5 @@
+[01/100] Total Loss: 6.6743, Discrepancy Loss: 0.0524,  Constraint Loss: 0.7358
+[02/100] Total Loss: 1.2994, Discrepancy Loss: 0.0312,  Constraint Loss: 0.1409
+[03/100] Total Loss: 0.5074, Discrepancy Loss: 0.0305,  Constraint Loss: 0.0530
+[04/100] Total Loss: 0.2483, Discrepancy Loss: 0.0316,  Constraint Loss: 0.0241
+[05/100] Total Loss: 0.1750, Discrepancy Loss: 0.0282,  Constraint Loss: 0.0163
