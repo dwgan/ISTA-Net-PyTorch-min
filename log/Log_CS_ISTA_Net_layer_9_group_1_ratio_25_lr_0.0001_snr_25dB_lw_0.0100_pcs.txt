@@ -43,3 +43,4 @@
 [43/100] Total Loss: 0.0030, Discrepancy Loss: 0.0025,  Constraint Loss: 0.0459
 [44/100] Total Loss: 0.0042, Discrepancy Loss: 0.0039,  Constraint Loss: 0.0348
 [45/100] Total Loss: 0.0039, Discrepancy Loss: 0.0028,  Constraint Loss: 0.1155
+[01/100] Total Loss: 0.0018, Discrepancy Loss: 0.0017,  Constraint Loss: 0.0084

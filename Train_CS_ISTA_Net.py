@@ -3,6 +3,7 @@ import torch.nn as nn
 from torch.nn import init
 import torch.nn.functional as F
 import scipy.io as sio
+import h5py
 import numpy as np
 import os
 from torch.utils.data import Dataset, DataLoader
@@ -59,7 +60,7 @@ ratio_dict = {1: 10, 4: 43, 10: 109, 25: 272, 30: 327, 40: 436, 50: 545}
 
 n_input = ratio_dict[cs_ratio]
 n_output = 1089
-nrtrain = 88912   # number of training blocks
+nrtrain = 895312 # 88912   # number of training blocks
 batch_size = 1
 
 
@@ -69,10 +70,12 @@ Phi_data = sio.loadmat(Phi_data_Name)
 Phi_input = Phi_data['phi']
 
 
-Training_data_Name = 'Training_Data.mat'
-Training_data = sio.loadmat('./%s/%s' % (args.data_dir, Training_data_Name))
-Training_labels = Training_data['labels']
-
+Training_data_Name = 'Training_Data_En.mat'
+# Training_data = sio.loadmat('./%s/%s' % (args.data_dir, Training_data_Name))
+# Training_labels = Training_data['labels']
+with h5py.File('./%s/%s' % (args.data_dir, Training_data_Name), 'r') as file:
+    Training_labels = file['labels'][:]
+    Training_labels = Training_labels.T
 
 Qinit_Name = './%s/Initialization_Matrix_%d.mat' % (args.matrix_dir, cs_ratio)
 
