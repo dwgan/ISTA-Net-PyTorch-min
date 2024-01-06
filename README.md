@@ -185,3 +185,11 @@ If you find the code helpful in your resarch or work, please cite the following 
 }
 ```
 ## Acknowledgements
+
+
+# Further development
+**version 2.0**: 
+1. Add multiple noise.
+2. Add more training sets.
+3. Add adjusting learning rate.
+result: Same reconstruction quality.
