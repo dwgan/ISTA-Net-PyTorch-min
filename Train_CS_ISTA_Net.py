@@ -10,10 +10,12 @@ from torch.utils.data import Dataset, DataLoader
 import platform
 from argparse import ArgumentParser
 from noise_generate import noise_generate_e, noise_generate_E
+import torch.optim.lr_scheduler as LS
 
 parser = ArgumentParser(description='ISTA-Net')
 
 parser.add_argument('--loss_weight', type=float, default=0.01, help='loss weight of constrain term')
+parser.add_argument('--batch_size', type=int, default=64, help='loss weight of constrain term')
 parser.add_argument('--noise_snr', type=int, default=25, help='noise intensity of sensing process')
 parser.add_argument('--start_epoch', type=int, default=0, help='epoch number of start training')
 parser.add_argument('--end_epoch', type=int, default=100, help='epoch number of end training')
@@ -61,7 +63,7 @@ ratio_dict = {1: 10, 4: 43, 10: 109, 25: 272, 30: 327, 40: 436, 50: 545}
 n_input = ratio_dict[cs_ratio]
 n_output = 1089
 nrtrain = 895312 # 88912   # number of training blocks
-batch_size = 1
+batch_size = args.batch_size
 
 
 # Load CS Sampling Matrix: phi
@@ -208,6 +210,7 @@ else:
                              shuffle=True)
 
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+scheduler = LS.MultiStepLR(optimizer, milestones=[120, 180, 220], gamma=0.2)
 
 model_dir = "./%s/CS_ISTA_Net_layer_%d_group_%d_ratio_%d_lr_%.4f_snr_%ddB_lw_%.4f_%s" % (args.model_dir, layer_num, group_num, cs_ratio, learning_rate, args.noise_snr, args.loss_weight, args.noise_mode)
 
@@ -266,6 +269,8 @@ for epoch_i in range(start_epoch+1, end_epoch+1):
 
         output_data = "[%02d/%02d] Total Loss: %.4f, Discrepancy Loss: %.4f,  Constraint Loss: %.4f\n" % (epoch_i, end_epoch, loss_all.item(), loss_discrepancy.item(), loss_constraint)
         print(output_data)
+
+    scheduler.step()
 
     output_file = open(log_file_name, 'a')
     output_file.write(output_data)

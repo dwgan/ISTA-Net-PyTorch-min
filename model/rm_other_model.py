@@ -13,7 +13,7 @@ for subdir, dirs, files in os.walk(root_dir):
             # 提取文件名中的数字并转换为整数
             number = int(match.group(1))
             # 检查数字是否不是50的倍数
-            if number % 100 != 0:
+            if number % 10 != 0:
                 # 构建完整的文件路径
                 file_path = os.path.join(subdir, filename)
                 # 删除文件
